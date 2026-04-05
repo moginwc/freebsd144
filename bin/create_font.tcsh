@@ -17,6 +17,7 @@ ttx -o ${fn}.ttx ${fn}.ttf
   # Binary Editor BZは下記設定で、①フォント一覧に表示される、②フォント幅異常を防げる
   sed -i '' -e 's/<ulCodePageRange1 value=".*"\/>/<ulCodePageRange1 value="00000000 00000010 00000000 00000001"\/>/' ${fn}.ttx
   sed -i '' -e 's/<xAvgCharWidth value=".*"\/>/<xAvgCharWidth value="1024"\/>/' ${fn}.ttx
+  sed -i '' -e 's/<isFixedPitch value=".*"\/>/<isFixedPitch value="1"\/>/' ${fn}.ttx
 
 # 一部フォントの入れ替えを行う
 
