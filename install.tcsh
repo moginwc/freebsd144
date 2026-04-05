@@ -287,6 +287,7 @@ if (" ${selected:q} " =~ "* build_mlterm_uim *") then
     cd /usr/ports/x11/mlterm
     sudo env BATCH=yes make
     sudo env BATCH=yes make reinstall
+    sed -i '' 's/^#mlterm#//g' ~/.fvwm2rc
     cd ~/${ver}
 endif
 
